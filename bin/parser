@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+$: << File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib'))
+
+require 'config_parser'
+
+if File.file?(ARGV.first)
+  puts ConfigParser.new(File.read(ARGV.first))
+else
+  puts "#{ARGV.first} is not a file."
+  exit 0
+end
