@@ -20,15 +20,15 @@ Just require the library and use it in your code:
 
 ```
 $ irb -I lib
-require 'config_parser'
-parser = ConfigParser.new(File.read('path-to-config-file'))
+> require 'config_parser'
+> parser = ConfigParser.new(File.read('path-to-config-file'))
 ```
 
 You can then access the keys of your config files via dot notation or via the config hash:
 
 ```
-parser.verbose
+> parser.verbose
 => true 
-parser.config['verbose']
+> parser.config['verbose']
 => true 
 ```
